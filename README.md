@@ -44,7 +44,7 @@ El **Proyecto Quimera** es un asistente de IA diseñado para funcionar como un "
 
 <div align="center">
   <br/>
-  <img src="[https://github.com/SRdeMora/Ingenieria-de-Contexto/blob/main/asset/git.gif](https://github.com/SRdeMora/Ingenieria-de-Contexto/blob/main/asset/V%C3%ADdeo%20sin%20t%C3%ADtulo%20%E2%80%90%20Hecho%20con%20Clipchamp%20(5).mp4)" alt="Demo de Quimera UI en acción"/>
+  <img src="https://github.com/SRdeMora/Ingenieria-de-Contexto/blob/main/asset/V%C3%ADdeo%20sin%20t%C3%ADtulo%20%E2%80%90%20Hecho%20con%20Clipchamp%20(5).mp4)" alt="Demo de Quimera UI en acción"/>
   <p><em>Demostración de la interfaz de usuario de Quimera.</em></p>
 </div>
 
