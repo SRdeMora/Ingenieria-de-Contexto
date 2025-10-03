@@ -44,8 +44,8 @@ El **Proyecto Quimera** es un asistente de IA diseñado para funcionar como un "
 
 <div align="center">
   <br/>
-  <!-- AÑADE AQUÍ UN GIF DE DEMOSTRACIÓN DE LA UI -->
-  <img src=""C:\Users\Samuel\Downloads\git.gif"" alt="Demo de Quimera UI en acción"/>
+  <img src="https://raw.githubusercontent.com/SRdeMora/chimera_project/main/assets/demo.gif" alt="Demo de Quimera UI en acción"/><!-- AÑADE AQUÍ UN GIF DE DEMOSTRACIÓN DE LA UI -->
+  <img src= alt="Demo de Quimera UI en acción"/>
   <p><em>Demostración de la interfaz de usuario de Quimera.</em></p>
 </div>
 
