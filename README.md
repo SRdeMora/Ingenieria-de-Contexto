@@ -43,31 +43,7 @@ El **Proyecto Quimera** es un asistente de inteligencia artificial conversaciona
 
 Quimera sigue una arquitectura de microservicios lógicos, dividida en un **Backend (Core)** y una **UI (Frontend)** que se comunican vía API REST, integrándose con múltiples sistemas de memoria y servicios externos.
 
-```mermaid
-graph TD
-    subgraph Frontend
-        A[Chimera UI (PySide6)] --> B(API Client)
-    end
 
-    subgraph Backend
-        B --> C[Chimera Core API (FastAPI)]
-        C --> D[Orchestrator]
-        D --> E[PersonalityEngine]
-        D --> F[ContextEngine]
-        D --> G[ApiManager]
-        D --> H[PluginManager]
-    end
-
-    subgraph "Memoria y Servicios"
-        F --> I[Redis]
-        F --> J[SQLite]
-        F --> K[ChromaDB]
-        F --> L[Neo4j]
-        G --> M[Proveedores LLM]
-        H --> N[Plugins]
-    end```
-
----
 
 <!-- SECCIÓN DE STACK TECNOLÓGICO EN HTML -->
 <div align="left">
