@@ -43,6 +43,42 @@ El **Proyecto Quimera** es un asistente de inteligencia artificial conversaciona
 
 Quimera sigue una arquitectura de microservicios lógicos, dividida en un **Backend (Core)** y una **UI (Frontend)** que se comunican vía API REST, integrándose con múltiples sistemas de memoria y servicios externos.
 
+```plaintext
+chimera_project/
+├── .env                  # Variables de entorno (claves API, configuraciones)
+├── requirements.txt      # Dependencias de Python
+├── chimera_core/         # Lógica del Backend (API con FastAPI)
+│   ├── main.py           # Punto de entrada de la API
+│   ├── orchestrator.py   # Cerebro central que coordina los módulos
+│   ├── context_engine.py # Motor que construye el contexto para el LLM
+│   ├── memory/           # Módulos para la gestión de memoria
+│   │   ├── redis_manager.py
+│   │   ├── chroma_manager.py
+│   │   ├── sqlite_manager.py
+│   │   └── neo4j_manager.py
+│   ├── meta/             # Módulos de análisis de metadatos
+│   │   └── personality_engine.py
+│   ├── plugins/          # Herramientas extensibles para el LLM
+│   │   ├── plugin_manager.py
+│   │   ├── mcp_base.py
+│   │   └── file_system_plugin.py
+│   └── providers/        # Integraciones con proveedores de LLM
+│       ├── api_manager.py
+│       ├── base_provider.py
+│       ├── openai_provider.py
+│       └── gemini_provider.py
+├── chimera_ui/           # Interfaz de Usuario (App de escritorio con PySide6)
+│   ├── main.py           # Punto de entrada de la UI
+│   ├── api_client.py     # Cliente para comunicarse con el backend
+│   └── ui/               # Componentes de la interfaz
+│       ├── main_window.py
+│       └── settings_dialog.py
+├── _docs/                # Documentación y assets
+├── chroma_data/          # Datos persistentes de ChromaDB
+├── setup/                # Scripts de utilidad
+└── venv/                 # Entorno virtual de Python
+```
+
 
 
 <!-- SECCIÓN DE STACK TECNOLÓGICO EN HTML -->
@@ -126,10 +162,8 @@ El diseño modular de Quimera facilita la adición de nuevas capacidades.
 
 ## 📜 Licencia
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+Este proyecto está bajo la Licencia APACHE 2.0. Consulta el archivo `LICENSE` para más detalles.
 
 ---
 
-<div align="center">
-  <strong>¡Bienvenido al Proyecto Quimera, Arkitekto!</strong>
 </div>
