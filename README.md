@@ -46,12 +46,12 @@ Quimera sigue una arquitectura de microservicios lógicos, dividida en un **Back
 ```mermaid
 graph TD
     subgraph Frontend
-        A[Chimera UI (PySide6)] -- "Peticiones HTTP" --> B(API Client)
+        A[Chimera UI (PySide6)] --> B(API Client)
     end
 
     subgraph Backend
-        B -- "Peticiones HTTP" --> C[Chimera Core API (FastAPI)]
-        C -- "Orquestación" --> D[Orchestrator]
+        B --> C[Chimera Core API (FastAPI)]
+        C --> D[Orchestrator]
         D --> E[PersonalityEngine]
         D --> F[ContextEngine]
         D --> G[ApiManager]
@@ -59,10 +59,101 @@ graph TD
     end
 
     subgraph "Memoria y Servicios"
-        F -- Historial --> I[Redis]
-        F -- Resúmenes --> J[SQLite]
-        F -- "Memoria Semántica" --> K[ChromaDB]
-        F -- "Grafo Conocimiento" --> L[Neo4j]
-        G -- Interacción --> M[Proveedores LLM]
-        H -- Acciones --> N[Plugins]
-    end
+        F --> I[Redis]
+        F --> J[SQLite]
+        F --> K[ChromaDB]
+        F --> L[Neo4j]
+        G --> M[Proveedores LLM]
+        H --> N[Plugins]
+    end```
+
+---
+
+<!-- SECCIÓN DE STACK TECNOLÓGICO EN HTML -->
+<div align="left">
+  <h3>🛠️ Stack Tecnológico</h3>
+  <ul>
+    <li><strong>Lenguaje:</strong> Python 3.10+</li>
+    <li><strong>Backend:</strong> FastAPI, Uvicorn</li>
+    <li><strong>Frontend:</strong> PySide6</li>
+    <li><strong>Bases de Datos de Memoria:</strong> Redis, SQLite, ChromaDB, Neo4j (Opcional)</li>
+    <li><strong>Proveedores LLM:</strong> OpenAI, Google Gemini</li>
+    <li><strong>NLP (Análisis de Personalidad):</strong> Hugging Face Transformers</li>
+    <li><strong>Renderizado UI:</strong> Markdown-it-py, Pygments</li>
+  </ul>
+</div>
+
+---
+
+<!-- SECCIÓN DE GUÍA DE USO EN HTML CON DESPLEGABLES -->
+<div>
+  <h3>🚀 Guía de Instalación y Uso</h3>
+  <details>
+    <summary><strong>Paso 1: Requisitos Previos</strong></summary>
+    <br/>
+    <ul>
+      <li>Python 3.10 o superior.</li>
+      <li>Servidores de Redis y/o Neo4j en ejecución (si se van a utilizar).</li>
+    </ul>
+  </details>
+  <details>
+    <summary><strong>Paso 2: Clonar e Instalar</strong></summary>
+    <br/>
+    <p>Clona el repositorio:</p>
+    <pre><code>git clone https://github.com/tu_usuario/chimera_project.git
+cd chimera_project</code></pre>
+    <p>Crea y activa el entorno virtual:</p>
+    <pre><code>python -m venv venv
+.\venv\Scripts\activate  # Windows
+# source venv/bin/activate # macOS/Linux</code></pre>
+    <p>Instala las dependencias:</p>
+    <pre><code>pip install -r requirements.txt</code></pre>
+  </details>
+  <details>
+    <summary><strong>Paso 3: Configurar Variables de Entorno (`.env`)</strong></summary>
+    <br/>
+    <p>Crea un archivo <code>.env</code> en la raíz del proyecto y añade tus claves API y configuraciones.</p>
+    <pre><code># Claves API para Proveedores de LLM
+OPENAI_API_KEY="tu_clave_api_openai_aqui"
+GOOGLE_API_KEY="tu_clave_api_gemini_aqui"
+
+# Configuración de Redis
+REDIS_HOST="localhost"
+REDIS_PORT=6379
+
+# Configuración de Neo4j (Opcional)
+# NEO4J_URI="bolt://localhost:7687"
+# NEO4J_USER="neo4j"
+# NEO4J_PASSWORD="tu_contraseña_neo4j"</code></pre>
+  </details>
+  <details>
+    <summary><strong>Paso 4: Ejecución</strong></summary>
+    <br/>
+    <p><strong>IMPORTANTE:</strong> Debes tener <strong>dos terminales abiertas</strong> con el entorno virtual activado.</p>
+    <p><strong>Terminal 1: Iniciar el Backend (Core)</strong></p>
+    <pre><code>python chimera_core/main.py</code></pre>
+    <p><strong>Terminal 2: Iniciar el Frontend (UI)</strong></p>
+    <pre><code>python chimera_ui/main.py</code></pre>
+  </details>
+</div>
+
+---
+
+## 🧩 Extensibilidad y Contribución
+
+El diseño modular de Quimera facilita la adición de nuevas capacidades.
+
+-   **Añadir Nuevos Proveedores de LLM:** Crea una nueva clase en `chimera_core/providers/` que herede de `BaseProvider`. El `ApiManager` lo descubrirá automáticamente.
+-   **Crear Nuevos Plugins (Herramientas):** Crea una nueva clase en `chimera_core/plugins/` que herede de `MCPPlugin` y define sus `ToolSignature`. El `PluginManager` lo cargará al iniciar.
+
+---
+
+## 📜 Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+
+---
+
+<div align="center">
+  <strong>¡Bienvenido al Proyecto Quimera, Arkitekto!</strong>
+</div>
