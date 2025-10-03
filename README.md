@@ -46,23 +46,23 @@ Quimera sigue una arquitectura de microservicios lógicos, dividida en un **Back
 ```mermaid
 graph TD
     subgraph Frontend
-        A[Chimera UI (PySide6)] -- Peticiones HTTP --> B(API Client)
+        A[Chimera UI (PySide6)] -- "Peticiones HTTP" --> B(API Client)
     end
 
     subgraph Backend
-        B -- Peticiones HTTP --> C[Chimera Core API (FastAPI)]
-        C -- Orquestación --> D[Orchestrator]
+        B -- "Peticiones HTTP" --> C[Chimera Core API (FastAPI)]
+        C -- "Orquestación" --> D[Orchestrator]
         D --> E[PersonalityEngine]
         D --> F[ContextEngine]
         D --> G[ApiManager]
         D --> H[PluginManager]
     end
 
-    subgraph Memoria y Servicios
+    subgraph "Memoria y Servicios"
         F -- Historial --> I[Redis]
         F -- Resúmenes --> J[SQLite]
-        F -- Memoria Semántica --> K[ChromaDB]
-        F -- Grafo Conocimiento --> L[Neo4j]
+        F -- "Memoria Semántica" --> K[ChromaDB]
+        F -- "Grafo Conocimiento" --> L[Neo4j]
         G -- Interacción --> M[Proveedores LLM]
         H -- Acciones --> N[Plugins]
     end
