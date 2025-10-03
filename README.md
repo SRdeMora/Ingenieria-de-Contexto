@@ -44,8 +44,7 @@ El **Proyecto Quimera** es un asistente de IA diseñado para funcionar como un "
 
 <div align="center">
   <br/>
-  <img src="https://github.com/SRdeMora/Ingenieria-de-Contexto/blob/main/asset/git.gif" alt="Demo de Quimera UI en acción"/><!-- AÑADE AQUÍ UN GIF DE DEMOSTRACIÓN DE LA UI -->
-  <img src= alt="Demo de Quimera UI en acción"/>
+  <img src="https://github.com/SRdeMora/Ingenieria-de-Contexto/blob/main/asset/git.gif" alt="Demo de Quimera UI en acción"/>
   <p><em>Demostración de la interfaz de usuario de Quimera.</em></p>
 </div>
 
@@ -173,7 +172,7 @@ El diseño modular de Quimera facilita la adición de nuevas capacidades.
 
 ## 📜 Licencia
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+Este proyecto está bajo la Licencia APACHE 2.0. Consulta el archivo `LICENSE` para más detalles.
 
 ---
 
