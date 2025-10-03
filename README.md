@@ -104,6 +104,79 @@ Este repositorio demuestra la capacidad de diseñar y construir un sistema de IA
 ├── 🗄️ chroma_data/          # Datos persistentes de ChromaDB
 ├── 🛠️ setup/                # Scripts de utilidad
 └── 🌐 venv/                 # Entorno virtual de Python
+```
+<div align="center">
+  <strong>¡Bienvenido al Proyecto Quimera, Arkitekto!</strong>
+</div>
+<!-- SECCIÓN DE GUÍA DE USO EN HTML CON DESPLEGABLES -->
+<div>
+  <h3>🚀 Guía de Instalación y Uso</h3>
+  <details>
+    <summary><strong>Paso 1: Requisitos Previos</strong></summary>
+    <br/>
+    <ul>
+      <li>Python 3.10 o superior.</li>
+      <li>Servidores de Redis y/o Neo4j en ejecución (si se van a utilizar).</li>
+    </ul>
+  </details>
+  <details>
+    <summary><strong>Paso 2: Clonar e Instalar</strong></summary>
+    <br/>
+    <p>Clona el repositorio:</p>
+    <pre><code>git clone https://github.com/tu_usuario/chimera_project.git
+cd chimera_project</code></pre>
+    <p>Crea y activa el entorno virtual:</p>
+    <pre><code>python -m venv venv
+.\venv\Scripts\activate  # Windows
+# source venv/bin/activate # macOS/Linux</code></pre>
+    <p>Instala las dependencias:</p>
+    <pre><code>pip install -r requirements.txt</code></pre>
+  </details>
+  <details>
+    <summary><strong>Paso 3: Configurar Variables de Entorno (`.env`)</strong></summary>
+    <br/>
+    <p>Crea un archivo <code>.env</code> en la raíz del proyecto y añade tus claves API y configuraciones.</p>
+    <pre><code># Claves API para Proveedores de LLM
+OPENAI_API_KEY="tu_clave_api_openai_aqui"
+GOOGLE_API_KEY="tu_clave_api_gemini_aqui"
+
+# Configuración de Redis
+REDIS_HOST="localhost"
+REDIS_PORT=6379
+
+# Configuración de Neo4j (Opcional)
+# NEO4J_URI="bolt://localhost:7687"
+# NEO4J_USER="neo4j"
+# NEO4J_PASSWORD="tu_contraseña_neo4j"</code></pre>
+  </details>
+  <details>
+    <summary><strong>Paso 4: Ejecución</strong></summary>
+    <br/>
+    <p><strong>IMPORTANTE:</strong> Debes tener <strong>dos terminales abiertas</strong> con el entorno virtual activado.</p>
+    <p><strong>Terminal 1: Iniciar el Backend (Core)</strong></p>
+    <pre><code>python chimera_core/main.py</code></pre>
+    <p><strong>Terminal 2: Iniciar el Frontend (UI)</strong></p>
+    <pre><code>python chimera_ui/main.py</code></pre>
+  </details>
+</div>
+
+---
+
+## 🧩 Extensibilidad y Contribución
+
+El diseño modular de Quimera facilita la adición de nuevas capacidades.
+
+-   **Añadir Nuevos Proveedores de LLM:** Crea una nueva clase en `chimera_core/providers/` que herede de `BaseProvider`. El `ApiManager` lo descubrirá automáticamente.
+-   **Crear Nuevos Plugins (Herramientas):** Crea una nueva clase en `chimera_core/plugins/` que herede de `MCPPlugin` y define sus `ToolSignature`. El `PluginManager` lo cargará al iniciar.
+
+---
+
+## 📜 Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+
+---
+
 <div align="center">
   <strong>¡Bienvenido al Proyecto Quimera, Arkitekto!</strong>
 </div>
