@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./_docs/logo_quimera.png" alt="Logo de Quimera" width="150"/>
+   <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/brain.svg" alt="Logo de Quimera" width="150" style="filter: invert(50%) sepia(100%) saturate(1000%) hue-rotate(180deg);"/>
   <h1 align="center">
     Proyecto Quimera: Exo-Córtex Conversacional
   </h1>
