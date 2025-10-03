@@ -44,8 +44,10 @@ El **Proyecto Quimera** es un asistente de IA diseñado para funcionar como un "
 
 <div align="center">
   <br/>
-  <img src="[https://github.com/SRdeMora/Ingenieria-de-Contexto/blob/main/asset/V%C3%ADdeo%20sin%20t%C3%ADtulo%20%E2%80%90%20Hecho%20con%20Clipchamp%20(5).mp4)] alt="Demo de Quimera UI en acción"/>
-  <p><em>Demostración de la interfaz de usuario de Quimera.</em></p>
+  <a href="https://github.com/SRdeMora/Ingenieria-de-Contexto/blob/main/asset/V%C3%ADdeo%20sin%20t%C3%ADtulo%20%E2%80%90%20Hecho%20con%20Clipchamp%20(5).mp4" target="_blank">
+    <img src="https://img.shields.io/badge/Ver%20Demo%20en%20V%C3%ADdeo-Haz%20Clic%20Aqu%C3%AD-brightgreen?style=for-the-badge&logo=youtube" alt="Ver Demo de Quimera UI en acción"/>
+  </a>
+  <p><em>Haz clic en la insignia para ver una demostración en video del proyecto.</em></p>
 </div>
 
 ---
