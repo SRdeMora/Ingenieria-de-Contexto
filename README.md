@@ -44,7 +44,7 @@ El **Proyecto Quimera** es un asistente de IA diseñado para funcionar como un "
 
 ---
 
-## 💡 Por qué este proyecto es relevante para un reclutador
+## 💡 Idea del Proyecto
 
 Este repositorio demuestra la capacidad de diseñar y construir un sistema de IA complejo que va más allá de simples llamadas a una API.
 
