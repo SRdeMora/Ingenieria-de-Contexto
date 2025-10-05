@@ -7,7 +7,7 @@
     Proyecto Quimera: Exo-Córtex Conversacional
   </h1>
   <p align="center">
-    <strong>Una implementación avanzada de un sistema RAG (Retrieval-Augmented Generation) con memoria híbrida, orquestación inteligente y capacidades agenticas.</strong>
+    <strong>Una implementación avanzada de RAG con un orquestador dual-LLM y un núcleo de memoria multi-capa (Vectorial, Grafo y Clave-Valor).</strong>
   </p>
 </div>
 
